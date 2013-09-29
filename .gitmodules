@@ -1,6 +1,3 @@
-[submodule "adblib/core"]
-	path = adblib/core
-	url = https://android.googlesource.com/platform/system/core
 [submodule "src/core"]
 	path = src/core
 	url = https://android.googlesource.com/platform/system/core
