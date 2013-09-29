@@ -1,8 +1,5 @@
-bin/
-lib/
 man/
 local/
 .tox/
 *.pyc
-include/
 __pycache__
