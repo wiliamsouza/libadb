@@ -1,0 +1,9 @@
+all:
+	make -C adb
+	make -C libcutils
+	make -C libzipfile
+
+clean:
+	make -C adb clean
+	make -C libcutils clean
+	make -C libzipfile clean
