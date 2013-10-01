@@ -4,6 +4,13 @@ Android Debug Bridge lib
 
 Python ctypes wrapper to adb library.
 
+Requirements
+============
+
+On ubuntu::
+
+    $ sudo apt-get install zlib1g-dev
+
 
 Cloning
 =======
