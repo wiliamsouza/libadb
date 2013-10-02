@@ -14,9 +14,12 @@ On ubuntu::
 Cloning
 =======
 
-It uses a git submodule, you must run two commands:: 
+Just run::
 
     $ git clone https://github.com/wiliamsouza/adblib.git
+
+It uses a git submodule, you must run this two commands:: 
+
     $ git submodule init
     $ git submodule update
 
