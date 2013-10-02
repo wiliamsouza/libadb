@@ -11,7 +11,7 @@ argv = (c_char_p * argc)()
 for n in range(argc):
     argv[n] = sys.argv[n]
 
-adblib = cdll.LoadLibrary('adblib.so')
+adblib = cdll.LoadLibrary('build/libadb.so')
 adblib.adb_trace_init()
 
 adblib.adb_commandline(argc, argv)
