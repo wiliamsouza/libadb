@@ -1,5 +1,5 @@
 lib_LTLIBRARIES = libadb.la
-libadb_la_SOURCES = adblib.c
+libadb_la_SOURCES = libadb.c
 libadb_la_CPPFLAGS = -I$(top_srcdir)/include/adblib \
 		-I../core/include
 

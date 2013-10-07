@@ -1,1 +1,1 @@
-SUBDIRS = core adblib
+SUBDIRS = core libadb

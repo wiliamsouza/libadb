@@ -48,9 +48,9 @@ AC_CHECK_HEADERS([])
 
 AC_CONFIG_FILES([Makefile
 		include/Makefile
-		include/adblib/Makefile
+		include/libadb/Makefile
 		src/Makefile
-		src/adblib/Makefile
+		src/libadb/Makefile
 		src/core/Makefile
 		src/core/adb/Makefile
 		src/core/libcutils/Makefile
