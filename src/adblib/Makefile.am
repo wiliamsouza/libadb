@@ -1,8 +1,8 @@
-CC=gcc
-CFLAGS=-c -g -w -fPIC -I../core/adb/ -I ../../include/
+lib_LTLIBRARIES = libadb.la
+libadb_la_SOURCES = adblib.c
+libadb_la_CPPFLAGS = -I$(top_srcdir)/include/adblib \
+		-I../core/include
 
-all:
-	$(CC) $(CFLAGS) -o libadb.o libadb.c
-
-clean:
-	rm -rf *.o
+libadb_la_LIBADD = ../core/adb/libadblib.a \
+		../core/libcutils/libcutils.a \
+		../core/libzipfile/libzipfile.a

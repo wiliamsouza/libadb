@@ -1,2 +1,2 @@
-include_HEADERS = adblib.h
+include_HEADERS = libadb.h
 
