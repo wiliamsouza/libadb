@@ -5,8 +5,8 @@ AC_INIT([adblib], [0.1], [wiliamsouza83@gmail.com])
 AM_INIT_AUTOMAKE
 LT_INIT([dlopen])
 
-#AC_CONFIG_SRCDIR([src/adblib/adblib.c])
-#AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_SRCDIR([src/libadb/libadb.c])
+AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.
 AC_PROG_CC
