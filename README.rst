@@ -45,10 +45,13 @@ The above command will generate an libadb.so at build directory.
 Running
 =======
 
+Export environment variable pointing to your recent build library location::
+
+   export ADB_LIBRARY_PATH=src/libadb/.libs/libadb.so
+
 Now you can call the follow command from the project root directory::
 
-   $ cd python/adblib/
-   $ adb.py
+   $ python python/adblib/adb.py
 
 It's an `adb` clone written in python using 17 lines of code. 
 

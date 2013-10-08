@@ -1,5 +1,5 @@
 from distutils.core import setup
 
-setup(name='adblib',
+setup(name='libadb',
       version='0.1',
-      packages=['adblib'])
+      packages=['libadb'])
