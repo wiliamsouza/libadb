@@ -29,6 +29,8 @@ Build
 
 To build the lib run::
 
+    $ autoreconf
+    $ ./configure
     $ make
 
 The above command will generate an libadb.so at build directory.
@@ -38,7 +40,8 @@ Running
 
 Now you can call the follow command from the project root directory::
 
-   python adblib/bin/adb.py
+   $ cd python/adblib/
+   $ adb.py
 
 It's an `adb` clone written in python using 17 lines of code. 
 
