@@ -50,7 +50,7 @@ Export environment variable pointing to your recent build library location::
 
 Set Python path to local copy o adblib python::
 
-    $ export PYTHONPATH=`pwd`python/:$PYTHONPATH
+    $ export PYTHONPATH=`pwd`/python/:$PYTHONPATH
 
 Now you can call the follow command from the project root directory::
 
