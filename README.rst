@@ -27,6 +27,13 @@ It uses a git submodule, you must run this two commands::
 Build
 =====
 
+Copy make files to android source code::
+
+    $ cp adb_Makefile.am core/adb/
+    $ cp core_Makefile.am core/
+    $ cp libcutils_Makefile.am core/libcutils/
+    $ cp libzipfile_Makefile.am core/libzipfile/
+
 To build the lib run::
 
     $ autoreconf
