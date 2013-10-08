@@ -1,5 +1,16 @@
+Makefile
+Makefile.in
+autom4te.cache/
+config.h*
+configure
 man/
 local/
 .tox/
+.libs/
+.deps/
+*.m4
+*.la
+*.lo
+*.o
 *.pyc
 __pycache__
