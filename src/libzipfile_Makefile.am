@@ -1,13 +1,6 @@
-CC=gcc
-CFLAGS = -g -w -fPIC -I. -I../../../include/
-
-SRCS= centraldir.c
-SRCS+= zipfile.c
-
-OBJS = $(SRCS:.c=.o)
-
-all: $(OBJS)
-
-clean:
-	rm -rf $(OBJS)
+noinst_LIBRARIES = libzipfile.a
+libzipfile_a_CPPFLAGS = -I../include
+libzipfile_a_CFLAGS = -fPIC
+libzipfile_a_SOURCES = centraldir.c \
+		zipfile.c
 
