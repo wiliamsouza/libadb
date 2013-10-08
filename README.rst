@@ -2,7 +2,7 @@
 Android Debug Bridge lib
 ========================
 
-Python ctypes wrapper to adb library.
+ADB build system and Python ctypes wrapper to libadb.
 
 Requirements
 ============
@@ -23,16 +23,15 @@ It uses a git submodule, you must run this two commands::
     $ git submodule init
     $ git submodule update
 
-
 Build
 =====
 
 Copy make files to android source code::
 
-    $ cp adb_Makefile.am core/adb/
-    $ cp core_Makefile.am core/
-    $ cp libcutils_Makefile.am core/libcutils/
-    $ cp libzipfile_Makefile.am core/libzipfile/
+    $ cp src/adb_Makefile.am core/adb/
+    $ cp src/core_Makefile.am core/
+    $ cp src/libcutils_Makefile.am core/libcutils/
+    $ cp src/libzipfile_Makefile.am core/libzipfile/
 
 To build the lib run::
 
@@ -47,14 +46,18 @@ Running
 
 Export environment variable pointing to your recent build library location::
 
-    $ export ADB_LIBRARY_PATH=src/libadb/.libs/libadb.so
+    $ export ADB_LIBRARY_PATH=`pwd`/src/libadb/.libs/libadb.so
 
 Set Python path to local copy o adblib python::
 
-    $ export PYTHONPATH=python/:$PYTHONPATH
+    $ export PYTHONPATH=`pwd`python/:$PYTHONPATH
 
 Now you can call the follow command from the project root directory::
 
-   $ python python/example/adb.py
+    $ python python/examples/adb.py
 
-It's an `adb` clone written in python using 17 lines of code. 
+It's an `adb` clone written in python using 3 lines of code. 
+
+
+
+
