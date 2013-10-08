@@ -47,11 +47,14 @@ Running
 
 Export environment variable pointing to your recent build library location::
 
-   export ADB_LIBRARY_PATH=src/libadb/.libs/libadb.so
+    $ export ADB_LIBRARY_PATH=src/libadb/.libs/libadb.so
+
+Set Python path to local copy o adblib python::
+
+    $ export PYTHONPATH=python/:$PYTHONPATH
 
 Now you can call the follow command from the project root directory::
 
-   $ python python/adblib/adb.py
+   $ python python/example/adb.py
 
 It's an `adb` clone written in python using 17 lines of code. 
-
