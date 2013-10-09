@@ -9,6 +9,8 @@ Requirements
 
 On ubuntu::
 
+    $ sudo apt-get install autoconf
+    $ sudo apt-get install libtool
     $ sudo apt-get install zlib1g-dev
 
 Cloning
@@ -28,13 +30,15 @@ Build
 
 Copy make files to android source code::
 
-    $ cp src/adb_Makefile.am core/adb/
-    $ cp src/core_Makefile.am core/
-    $ cp src/libcutils_Makefile.am core/libcutils/
-    $ cp src/libzipfile_Makefile.am core/libzipfile/
+    $ cp src/core_Makefile.am src/core/
+    $ cp src/adb_Makefile.am src/core/adb/
+    $ cp src/libcutils_Makefile.am src/core/libcutils/
+    $ cp src/libzipfile_Makefile.am src/core/libzipfile/
 
 To build the lib run::
 
+    $ aclocal
+    $ autoconf
     $ autoreconf
     $ ./configure
     $ make
