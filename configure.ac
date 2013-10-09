@@ -17,34 +17,15 @@ AC_CONFIG_MACRO_DIR([m4])
 AC_CHECK_HEADERS([])
 
 # Checks for libraries.
-# FIXME: Replace `main' with a function in `-lcrypto':
-#AC_CHECK_LIB([crypto], [main])
-# FIXME: Replace `main' with a function in `-ldl':
-#AC_CHECK_LIB([dl], [main])
-# FIXME: Replace `main' with a function in `-lpthread':
-#AC_CHECK_LIB([pthread], [main])
-# FIXME: Replace `main' with a function in `-lrt':
-#AC_CHECK_LIB([rt], [main])
+AC_CHECK_LIB([crypto], [EVP_CIPHER_CTX_init])
+AC_CHECK_LIB([ssl], [SSL_CTX_new])
+AC_CHECK_LIB([dl], [dlopen])
+AC_CHECK_LIB([pthread], [pthread_create])
+AC_CHECK_LIB([rt], [clock_gettime])
 
 
 # Checks for header files.
-#AC_CHECK_HEADERS([pthread.h
-#		fcntl.h
-#		inttypes.h
-#		limits.h
-#		malloc.h
-#		netdb.h
-#		netinet/in.h
-#		stddef.h
-#		stdint.h
-#		stdlib.h
-#		string.h
-#		sys/ioctl.h
-#		sys/mount.h
-#		sys/socket.h
-#		sys/time.h
-#		termios.h
-#		unistd.h])
+AC_CHECK_HEADERS([pthread.h openssl/evp.h openssl/ssl.h fcntl.h inttypes.h limits.h malloc.h netdb.h netinet/in.h stddef.h stdint.h stdlib.h string.h sys/ioctl.h sys/mount.h sys/socket.h sys/time.h termios.h unistd.h])
 
 AC_CONFIG_FILES([Makefile:Makefile.in
 		include/Makefile:include/Makefile.in
