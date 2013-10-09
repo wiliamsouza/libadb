@@ -46,15 +46,15 @@ AC_CHECK_HEADERS([])
 #		termios.h
 #		unistd.h])
 
-AC_CONFIG_FILES([Makefile
-		include/Makefile
-		include/libadb/Makefile
-		src/Makefile
-		src/libadb/Makefile
-		src/core/Makefile
-		src/core/adb/Makefile
-		src/core/libcutils/Makefile
-		src/core/libzipfile/Makefile])
+AC_CONFIG_FILES([Makefile:Makefile.in
+		include/Makefile:include/Makefile.in
+		include/libadb/Makefile:include/libadb/Makefile.in
+		src/Makefile:src/Makefile.in
+		src/libadb/Makefile:src/libadb/Makefile.in
+		src/core/Makefile:src/core/Makefile.in
+		src/core/adb/Makefile:src/core/adb/Makefile.in
+		src/core/libcutils/Makefile:src/core/libcutils/Makefile.in
+		src/core/libzipfile/Makefile:src/core/libzipfile/Makefile.in])
 AC_OUTPUT
 
 echo \
