@@ -9,9 +9,10 @@ Requirements
 
 On ubuntu::
 
-    $ sudo apt-get install autoconf
-    $ sudo apt-get install libtool
-    $ sudo apt-get install zlib1g-dev
+    sudo apt-get install autoconf
+    sudo apt-get install libtool
+    sudo apt-get install zlib1g-dev
+    sudo apt-get install libssl-dev
 
 Cloning
 =======
@@ -30,10 +31,14 @@ Build
 
 Copy make files to android source code::
 
-    $ cp src/core_Makefile.am src/core/
-    $ cp src/adb_Makefile.am src/core/adb/
-    $ cp src/libcutils_Makefile.am src/core/libcutils/
-    $ cp src/libzipfile_Makefile.am src/core/libzipfile/
+    cp src/core_Makefile.am src/core/Makefile.am
+    cp src/adb_Makefile.am src/core/adb/Makefile.am
+    cp src/libcutils_Makefile.am src/core/libcutils/Makefile.am
+    cp src/libzipfile_Makefile.am src/core/libzipfile/Makefile.am
+    cp src/core_Makefile.in src/core/Makefile.in
+    cp src/adb_Makefile.in src/core/adb/Makefile.in
+    cp src/libcutils_Makefile.in src/core/libcutils/Makefile.in
+    cp src/libzipfile_Makefile.in src/core/libzipfile/Makefile.in
 
 To build the lib run::
 
