@@ -14,3 +14,15 @@ local/
 *.o
 *.pyc
 __pycache__
+compile
+config.guess
+config.log
+config.status
+config.sub
+depcomp
+install-sh
+libtool
+ltmain.sh
+missing
+stamp-h1
+
