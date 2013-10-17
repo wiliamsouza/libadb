@@ -1,10 +1,11 @@
-from __future__ import unicode_literals
+from __future__ import absolute_import, unicode_literals
+
 
 import logging
 
 from ctypes import c_char_p
 
-from libadb import libadb
+from .libadb import libadb
 
 logger = logging.getLogger('libadb')
 
