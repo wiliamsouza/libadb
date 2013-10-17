@@ -1,4 +1,9 @@
+#include <sys/types.h>
+
 #include "file_sync_service.h"
+#include "fdevent.h"
+#include "adb.h"
+
 #include <libadb/libadb.h>
 
 int libadb_push_file(const char *lpath, const char *rpath, int verify) {

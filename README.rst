@@ -47,6 +47,13 @@ The above command will generate an libadb.so at build directory.
 Running
 =======
 
+Enable debug information::
+
+    export ADB_TRACE=1
+
+Python
+------
+
 Export environment variable pointing to your recent build library location::
 
     $ export ADB_LIBRARY_PATH=`pwd`/src/libadb/.libs/libadb.so
@@ -61,6 +68,19 @@ Now you can call the follow command from the project root directory::
 
 It's an `adb` clone written in python using 3 lines of code. 
 
+C
+--
 
+Export environment variable pointing to your recent build library location::
 
+    export LD_LIBRARY_PATH=../`pwd`/src/libadb/.libs/:$LD_LIBRARY_PATH
+    export LIBRARY_PATH=../`pwd`/src/libadb/.libs/:$LIBRARY_PATH
 
+Compile::
+
+    cd examples/
+    gcc devices.c -I../include/ -ladb -L../src/libadb/.libs/ -o devices
+
+Run::
+
+    ./devices
